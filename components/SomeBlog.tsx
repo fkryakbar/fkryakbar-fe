@@ -1,5 +1,7 @@
 import Image from "next/image";
 import smafy from '@/public/smafy.png'
+import OnProgress from "./OnProgress";
+import Link from "next/link";
 
 export default function SomeBlog() {
     return (
@@ -10,7 +12,8 @@ export default function SomeBlog() {
             <h1 className="dark:text-gray-300 lg:text-base text-sm mt-2">
                 Sharing about thoughts, mathematics, and other stuff
             </h1>
-            <div className="flex mt-4 lg:flex-row flex-col gap-5 justify-center flex-wrap">
+            <OnProgress className='mt-10' />
+            {/* <div className="flex mt-4 lg:flex-row flex-col gap-5 justify-center flex-wrap">
                 <div className="rounded-md border-[1px] border-gray-500 lg:basis-[32%] group hover:scale-105 transition-all hover:drop-shadow-md bg-white dark:bg-slate-950">
                     <div className='rounded-t-md max-h-[200px] overflow-clip drop-shadow-sm'>
                         <Image className='w-full' src={smafy.src} alt='Smafy' width={300} height={300} />
@@ -116,8 +119,10 @@ export default function SomeBlog() {
                         </p>
                     </div>
                 </div>
-            </div>
-            <button className='btn mt-4 font-bold'>Show More Posts</button>
+            </div> */}
+            <Link href={'/blog'}>
+                <button className='btn mt-4 font-bold'>Show More Posts</button>
+            </Link>
         </>
     )
 }

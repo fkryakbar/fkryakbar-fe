@@ -18,13 +18,17 @@ export default function Hero() {
                 <div className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0061ff] to-[#60efff] rounded-md blur group-hover:-inset-1 transition-all">
                     </div>
-                    <button className="btn relative dark:bg-slate-950 bg-white">
-                        Learn more about me
-                    </button>
+                    <Link href={'/about'}>
+                        <button className="btn relative dark:bg-slate-950 bg-white">
+                            Learn more about me
+                        </button>
+                    </Link>
                 </div>
-                <button className="btn relative dark:bg-slate-950">
-                    Projects
-                </button>
+                <Link href={'/projects'}>
+                    <button className="btn relative dark:bg-slate-950">
+                        Projects
+                    </button>
+                </Link>
             </div>
             <div className="mt-6">
                 <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">

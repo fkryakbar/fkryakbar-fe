@@ -1,5 +1,7 @@
 import smafy from '@/public/smafy.png'
 import Image from 'next/image'
+import OnProgress from './OnProgress'
+import Link from 'next/link'
 
 export default function FeaturedProject() {
     return (
@@ -10,7 +12,8 @@ export default function FeaturedProject() {
             <h1 className="dark:text-gray-300 lg:text-base text-sm mt-2">
                 I take pride in several projects that I have worked on.
             </h1>
-            <div className="flex mt-4 lg:flex-row flex-col gap-5 justify-center flex-wrap">
+            <OnProgress className='mt-10' />
+            {/* <div className="flex mt-4 lg:flex-row flex-col gap-5 justify-center flex-wrap">
                 <div className="rounded-md border-[1px] border-gray-500 lg:basis-[32%] p-4 group hover:scale-105 transition-all hover:drop-shadow-md bg-white dark:bg-slate-950">
                     <h1 className="font-bold text-xl">
                         Smafy
@@ -65,8 +68,10 @@ export default function FeaturedProject() {
                         </h1>
                     </div>
                 </div>
-            </div>
-            <button className='btn mt-4 font-bold'>Find More Projects</button>
+            </div> */}
+            <Link href={'/projects'}>
+                <button className='btn mt-4 font-bold'>Find More Projects</button>
+            </Link>
         </>
     )
 }
