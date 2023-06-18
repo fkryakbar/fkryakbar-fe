@@ -8,8 +8,8 @@ export default function Footer() {
                 <div className="flex gap-5 justify-center flex-wrap lg:text-base text-sm">
                     <Link className="hover:text-gradient-primary transition-all" href={'https://github.com/fkryakbar/fkryakbar-fe.git'}>Source Code</Link>
                     <Link className="hover:text-gradient-primary transition-all" href={'/design'}>Design</Link>
-                    <Link className="hover:text-gradient-primary transition-all" href={'statistics'}>Statistics</Link>
-                    <Link className="hover:text-gradient-primary transition-all" href={'feed-back'}>Feed Back</Link>
+                    <Link className="hover:text-gradient-primary transition-all" href={'/statistics'}>Statistics</Link>
+                    <Link className="hover:text-gradient-primary transition-all" href={'/feed-back'}>Feed Back</Link>
                 </div>
                 <div className="mt-10 flex flex-col items-center">
                     <p className="font-semibold">
