@@ -1,4 +1,3 @@
-"use client"
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PostsCounter from "@/components/PostsCounter";
@@ -9,8 +8,8 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import FeedBack from "@/components/FeedBack";
 import { Suspense } from "react";
-import useRequest from "@/utils/useRequest";
 import Likes from "@/components/Likes";
+import { CountViews } from "@/components/CountViews";
 
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
@@ -23,9 +22,9 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 export default function Projects({ params }: { params: { slug: string } }) {
     const project = allPosts.find((project) => project._raw.flattenedPath === params.slug && project.category == 'project')
     if (!project) notFound()
-    useRequest(`post/${params.slug}/views`)
     return (
         <>
+            <CountViews slug={params.slug} />
             <div className="dark:text-white transition-all">
                 <Navbar />
                 <div className="lg:w-[70%] w-[90%] mx-auto mt-[120px]">
