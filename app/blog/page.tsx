@@ -5,6 +5,8 @@ import PostsCounter from "@/components/PostsCounter";
 import { allPosts } from 'contentlayer/generated'
 import { compareDesc, format, parseISO } from 'date-fns'
 import Link from "next/link";
+import Image from "next/image";
+import { Suspense } from "react";
 export default function Blog() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date))).filter((post) => post.category == 'post');
   return (
@@ -26,13 +28,15 @@ export default function Blog() {
                     <Link key={post._id} href={`/blog/${post._raw.flattenedPath}`} className="lg:basis-[32%]">
                       <div className="rounded-md border-[1px] border-gray-500 group hover:scale-105 transition-all hover:drop-shadow-md bg-white dark:bg-slate-950">
                         <div className='rounded-t-md max-h-[200px] overflow-clip drop-shadow-sm'>
-                          <img className='w-full' src={`${post.image_link}`} alt={`${post.title}`} width={300} height={300} />
+                          <Image className='w-full' src={`${post.image_link}`} alt={`${post.title}`} width={350} height={350} />
                         </div>
                         <div className="p-4">
                           <h1 className="font-bold text-xl">
                             {post.title}
                           </h1>
-                          <PostsCounter />
+                          <Suspense fallback={<>Loading</>}>
+                            <PostsCounter slug={`${post._raw.flattenedPath}`} />
+                          </Suspense>
                           <h1 className="font-semibold mt-3 text-sm">
                             {format(parseISO(post.date), 'LLLL d, yyyy')}
                           </h1>

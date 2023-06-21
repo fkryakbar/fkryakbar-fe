@@ -1,11 +1,16 @@
+"use client"
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import OnProgress from "@/components/OnProgress";
 import PostsCounter from "@/components/PostsCounter";
 import { allPosts } from 'contentlayer/generated'
 import { format, parseISO } from 'date-fns'
 import Link from "next/link";
 import { notFound } from 'next/navigation'
+import Image from "next/image";
+import FeedBack from "@/components/FeedBack";
+import { Suspense } from "react";
+import useRequest from "@/utils/useRequest";
+import Likes from "@/components/Likes";
 
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
@@ -18,13 +23,14 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 export default function Projects({ params }: { params: { slug: string } }) {
     const post = allPosts.find((post) => post._raw.flattenedPath === params.slug && post.category == 'post')
     if (!post) notFound()
+    useRequest(`post/${params.slug}/views`)
     return (
         <>
             <div className="dark:text-white transition-all">
                 <Navbar />
-                <div className="lg:w-[70%] w-[90%] mx-auto mt-[100px]">
-                    <div className="w-full max-h-[420px] overflow-clip rounded-md">
-                        <img src={`${post.image_link}`} alt="" className="w-full" />
+                <div className="lg:w-[70%] w-[90%] mx-auto mt-[120px]">
+                    <div className="w-full max-h-[420px] overflow-clip rounded-md drop-shadow">
+                        <Image width={1000} height={1000} src={`${post.image_link}`} alt="Thumbnail" className="w-full" />
                     </div>
                     <h1 className="mt-5 lg:text-4xl text-2xl font-bold">
                         {post.title}
@@ -32,9 +38,17 @@ export default function Projects({ params }: { params: { slug: string } }) {
                     <h1 className="dark:text-gray-400 text-gray-700 text-sm mt-2">
                         Published on {format(parseISO(post.date), 'LLLL d, yyyy')}
                     </h1>
-                    <PostsCounter />
+                    <Suspense fallback={<>loading</>}>
+                        <PostsCounter slug={`${params.slug}`} />
+                    </Suspense>
                     <div className="h-[0.5px] bg-gray-600 mt-5"></div>
-                    <div className="[&>*]:mb-3 [&>*:last-child]:mb-0  mt-5 prose dark:prose-invert" dangerouslySetInnerHTML={{ __html: post.body.html }} />
+                    <div className="lg:flex gap-4">
+                        <div className="mt-5 prose dark:prose-invert" dangerouslySetInnerHTML={{ __html: post.body.html }} />
+                        <div>
+                            <FeedBack slug={`${params.slug}`} />
+                            <Likes slug={`${params.slug}`} />
+                        </div>
+                    </div>
                     <Link href={'/blog'} className="mt-5 mb-10 block text-gradient-primary">
                         Back to blog
                     </Link>

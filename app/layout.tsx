@@ -1,5 +1,4 @@
 import './globals.css'
-
 export const metadata = {
   title: 'Fkryakbar',
   description: `Hi it's me! fkryakbar`,

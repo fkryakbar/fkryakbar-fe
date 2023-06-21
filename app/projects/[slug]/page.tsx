@@ -1,11 +1,16 @@
+"use client"
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import OnProgress from "@/components/OnProgress";
 import PostsCounter from "@/components/PostsCounter";
 import { allPosts } from 'contentlayer/generated'
 import { format, parseISO } from 'date-fns'
 import Link from "next/link";
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
+import FeedBack from "@/components/FeedBack";
+import { Suspense } from "react";
+import useRequest from "@/utils/useRequest";
+import Likes from "@/components/Likes";
 
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
@@ -18,13 +23,14 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 export default function Projects({ params }: { params: { slug: string } }) {
     const project = allPosts.find((project) => project._raw.flattenedPath === params.slug && project.category == 'project')
     if (!project) notFound()
+    useRequest(`post/${params.slug}/views`)
     return (
         <>
             <div className="dark:text-white transition-all">
                 <Navbar />
-                <div className="lg:w-[70%] w-[90%] mx-auto mt-[100px]">
-                    <div className="w-full max-h-[420px] overflow-clip rounded-md">
-                        <img src={`${project.image_link}`} alt="" className="w-full" />
+                <div className="lg:w-[70%] w-[90%] mx-auto mt-[120px]">
+                    <div className="w-full max-h-[420px] overflow-clip rounded-md drop-shadow">
+                        <Image width={1000} height={1000} src={`${project.image_link}`} alt="Thumbnail" className="w-full" />
                     </div>
                     <h1 className="mt-5 lg:text-4xl text-2xl font-bold">
                         {project.title}
@@ -34,9 +40,9 @@ export default function Projects({ params }: { params: { slug: string } }) {
                             <>
                                 <div className="flex gap-2 text-xs mt-3">
                                     {
-                                        project.tech_stack.map(stack => {
+                                        project.tech_stack.map((stack, i) => {
                                             return (
-                                                <div className="p-1 rounded bg-gray-500 dark:bg-gray-700 text-white">{stack}</div>
+                                                <div key={i} className="p-1 rounded bg-gray-500 dark:bg-gray-700 text-white">{stack}</div>
                                             )
                                         })
                                     }
@@ -56,10 +62,17 @@ export default function Projects({ params }: { params: { slug: string } }) {
                             </Link>
                         ) : null
                     }
-
-                    <PostsCounter />
+                    <Suspense fallback={<>Loading</>}>
+                        <PostsCounter slug={`${params.slug}`} />
+                    </Suspense>
                     <div className="h-[0.5px] bg-gray-600 mt-5"></div>
-                    <div className="[&>*]:mb-3 [&>*:last-child]:mb-0  mt-5 prose dark:prose-invert" dangerouslySetInnerHTML={{ __html: project.body.html }} />
+                    <div className="lg:flex gap-4">
+                        <div className=" mt-5 prose dark:prose-invert" dangerouslySetInnerHTML={{ __html: project.body.html }} />
+                        <div>
+                            <FeedBack slug={`${params.slug}`} />
+                            <Likes slug={`${params.slug}`} />
+                        </div>
+                    </div>
                     <Link href={'/projects'} className="mt-5 mb-10 block text-gradient-primary">
                         Back to Projects
                     </Link>

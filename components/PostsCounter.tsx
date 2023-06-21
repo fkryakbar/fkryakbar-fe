@@ -1,4 +1,22 @@
-export default function PostsCounter() {
+"use client"
+
+import useRequest from "@/utils/useRequest"
+
+const Loading = () => {
+    return (
+        <>
+            <div className="flex gap-2 mt-1">
+                <div className="dark:bg-slate-800 bg-slate-300 w-14 rounded h-4"></div>
+                <div className="dark:bg-slate-800 bg-slate-300 w-14 rounded h-4"></div>
+            </div>
+        </>
+    )
+}
+
+export default function PostsCounter({ slug }: { slug: string }) {
+    const { data, error, isLoading } = useRequest(`post/${slug}`);
+    if (error) return "An error has occurred.";
+    if (isLoading) return <Loading />;
     return (
         <>
             <div className="flex gap-4 text-xs mt-3 items-center">
@@ -7,7 +25,7 @@ export default function PostsCounter() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                     </svg>
                     <p className="text-gradient-primary">
-                        1000
+                        {data.data.likes}
                     </p>
                 </div>
                 <div className="flex gap-1 items-center">
@@ -16,7 +34,7 @@ export default function PostsCounter() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <p className="text-gradient-primary">
-                        1000
+                        {data.data.views}
                     </p>
                 </div>
             </div>

@@ -39,7 +39,8 @@ export default function Navbar() {
     }, [])
 
 
-    const pathname = usePathname()
+    const get_pathname = usePathname()
+    const pathname = get_pathname.split('/')[1]
     return (
         <div className="fixed w-full dark:bg-slate-950 bg-white z-[9999] top-0 drop-shadow-sm">
             <div className="w-full h-2 bg-gradient-to-r from-[#0061ff] to-[#60efff]">
@@ -47,22 +48,22 @@ export default function Navbar() {
             <nav className="lg:w-[70%] w-[90%] mx-auto py-6 dark:text-white">
                 <div className="flex justify-between items-center">
                     <ul className="flex gap-4">
-                        <li className={`${pathname == '/' ? 'text-gradient-primary' : null}`}>
+                        <li className={`${pathname == '' ? 'text-gradient-primary' : null}`}>
                             <Link href={'/'}>
                                 Home
                             </Link>
                         </li>
-                        <li className={`${pathname == '/blog' ? 'text-gradient-primary' : null}`}>
+                        <li className={`${pathname == 'blog' ? 'text-gradient-primary' : null}`}>
                             <Link href={'/blog'}>
                                 Blog
                             </Link>
                         </li>
-                        <li className={`${pathname == '/projects' ? 'text-gradient-primary' : null}`}>
+                        <li className={`${pathname == 'projects' ? 'text-gradient-primary' : null}`}>
                             <Link href={'/projects'}>
                                 Projects
                             </Link>
                         </li>
-                        <li className={`${pathname == '/about' ? 'text-gradient-primary' : null}`}>
+                        <li className={`${pathname == 'about' ? 'text-gradient-primary' : null}`}>
                             <Link href={'/about'}>
                                 About
                             </Link>
