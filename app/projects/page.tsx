@@ -23,7 +23,7 @@ export default function Projects() {
                     <h1 className="dark:text-gray-300 lg:text-base text-sm mt-2">
                         I take pride in several projects that I have worked on.
                     </h1>
-                    <div className="flex mt-4 lg:flex-row flex-col gap-5 justify-center flex-wrap mb-[100px]">
+                    <div className="flex mt-4 lg:flex-row flex-col gap-5 flex-wrap mb-[100px]">
                         {
                             projects.map(project => {
                                 return (
