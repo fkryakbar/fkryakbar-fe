@@ -5,10 +5,12 @@ import FeaturedProject from "@/components/FeaturedProject";
 import SomeBlog from "@/components/SomeBlog";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import StatCount from "@/components/StatCount";
 export default function Home() {
   return (
     <>
       <div className="dark:text-white transition-all">
+        <StatCount />
         <Navbar />
         <div className="lg:w-[70%] w-[90%] mx-auto mt-[160px]">
           <Hero />
