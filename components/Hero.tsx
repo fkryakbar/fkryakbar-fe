@@ -1,8 +1,10 @@
 import Link from "next/link";
+import GradientComponent from "./GradientBackground";
 
 export default function Hero() {
     return (
-        <>
+        <div className="relative">
+            <GradientComponent />
             <div className="font-semibold ">
                 <h1 className="lg:text-4xl text-2xl">
                     Hello!
@@ -60,6 +62,6 @@ export default function Hero() {
                     </Link>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
