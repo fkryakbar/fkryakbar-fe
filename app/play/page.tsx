@@ -11,7 +11,7 @@ export default function Projects() {
         <>
             <div className="dark:text-white transition-all">
                 <Navbar />
-                <div className="lg:w-[70%] w-[90%] mx-auto mt-[160px]">
+                <div className="lg:w-[70%] w-[90%] mx-auto mt-[30px]">
                     <OnProgress />
                     <Footer />
                 </div>

@@ -42,7 +42,7 @@ export default function Navbar() {
     const get_pathname = usePathname()
     const pathname = get_pathname.split('/')[1]
     return (
-        <div className="fixed w-full dark:bg-slate-950 bg-white z-[9999] top-0 drop-shadow-sm">
+        <div className="w-full shadow">
             <div className="w-full h-2 bg-gradient-to-r from-[#0061ff] to-[#60efff]">
             </div>
             <nav className="lg:w-[70%] w-[90%] mx-auto py-6 dark:text-white">

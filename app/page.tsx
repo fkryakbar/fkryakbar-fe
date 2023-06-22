@@ -12,7 +12,7 @@ export default function Home() {
       <div className="dark:text-white transition-all">
         <StatCount />
         <Navbar />
-        <div className="lg:w-[70%] w-[90%] mx-auto mt-[160px]">
+        <div className="lg:w-[70%] w-[90%] mx-auto mt-[30px]">
           <Hero />
           <div className="mt-20">
             <TechStack />

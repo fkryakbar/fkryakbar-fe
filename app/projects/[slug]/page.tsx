@@ -27,7 +27,7 @@ export default function Projects({ params }: { params: { slug: string } }) {
             <CountViews slug={params.slug} />
             <div className="dark:text-white transition-all">
                 <Navbar />
-                <div className="lg:w-[70%] w-[90%] mx-auto mt-[120px]">
+                <div className="lg:w-[70%] w-[90%] mx-auto mt-[30px]">
                     <div className="w-full max-h-[420px] overflow-clip rounded-md drop-shadow">
                         <Image width={1000} height={1000} src={`${project.image_link}`} alt="Thumbnail" className="w-full" />
                     </div>

@@ -11,10 +11,10 @@ export default function About() {
         <>
             <div className="dark:text-white">
                 <Navbar />
-                <div className="lg:w-[70%] w-[90%] mx-auto mt-[160px]">
+                <div className="lg:w-[70%] w-[90%] mx-auto mt-[50px]">
                     <h1 className="font-semibold">
-                        <p className="text-3xl">About Me</p>
-                        <p className="text-transparent text-gradient-primary text-4xl mt-1">Ahmad Fikri Akbar</p>
+                        <p className="lg:text-3xl text-2xl">About Me</p>
+                        <p className="text-transparent text-gradient-primary lg:text-4xl text-3xl mt-1">Ahmad Fikri Akbar</p>
                     </h1>
                     <div className="mt-5 mb-10">
                         <div className="lg:w-[400px] w-[160px] float-right overflow-hidden ml-3 mb-3">

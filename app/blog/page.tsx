@@ -13,7 +13,7 @@ export default function Blog() {
     <>
       <div className="dark:text-white transition-all">
         <Navbar />
-        <div className="lg:w-[70%] w-[90%] mx-auto mt-[160px]">
+        <div className="lg:w-[70%] w-[90%] mx-auto mt-[30px]">
           <h1 className="font-semibold text-5xl text-gradient-primary">
             Posts
           </h1>
