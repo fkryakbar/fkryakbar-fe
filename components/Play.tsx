@@ -56,7 +56,6 @@ export default function Play() {
         let randomSelected = handAvailable[Math.floor(Math.random() * handAvailable.length)]
         setEnemySelected(randomSelected)
 
-        console.log(isUserScored(hand, randomSelected))
         if (userScore >= 5 || enemyScore >= 5) {
             if (userScore >= 5) {
                 setAlert('You win. Well you beat me this time')
