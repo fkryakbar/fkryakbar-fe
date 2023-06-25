@@ -14,7 +14,7 @@ export default function Hero() {
                 </h1>
             </div>
             <div className="mt-3 lg:w-[65%] w-[100%] lg:text-xl text-sm">
-                I am a mathematics student who enjoys learning new things, especially in the field of web development.
+                I&apos;am a mathematics student who enjoys learning new things, especially in the field of web development.
             </div>
             <div className="flex lg:gap-8 gap-5 lg:text-base text-sm font-semibold mt-6">
                 <div className="relative group">

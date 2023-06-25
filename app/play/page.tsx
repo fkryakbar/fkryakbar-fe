@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import OnProgress from "@/components/OnProgress";
+import Play from "@/components/Play";
 
 export const metadata = {
-    title: 'Give me feed back',
+    title: 'Play With Me',
 }
 
 export default function Projects() {
@@ -12,7 +12,7 @@ export default function Projects() {
             <div className="dark:text-white transition-all">
                 <Navbar />
                 <div className="lg:w-[70%] w-[90%] mx-auto mt-[30px]">
-                    <OnProgress />
+                    <Play />
                     <Footer />
                 </div>
             </div>
