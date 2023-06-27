@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { usePathname } from 'next/navigation'
+import StatCount from "./StatCount"
 
 export default function Navbar() {
     const [isDark, setDark] = useState(true)
@@ -43,6 +44,7 @@ export default function Navbar() {
     const pathname = get_pathname.split('/')[1]
     return (
         <div className="w-full shadow">
+            <StatCount/>
             <div className="w-full h-2 bg-gradient-to-r from-[#0061ff] to-[#60efff]">
             </div>
             <nav className="lg:w-[70%] w-[90%] mx-auto py-6 dark:text-white">
