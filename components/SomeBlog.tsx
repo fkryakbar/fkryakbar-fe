@@ -22,7 +22,7 @@ export default function SomeBlog() {
                         return (
                             <>
                                 <Link key={post._id} href={`/blog/${post._raw.flattenedPath}`} className="lg:basis-[32%]">
-                                    <div className="rounded-md border-[1px] border-gray-500 group hover:scale-105 transition-all hover:drop-shadow-md bg-white dark:bg-slate-950">
+                                    <div className="rounded-md border-[1px] border-gray-500 group transition-all hover:drop-shadow-md bg-white dark:bg-slate-950">
                                         <div className='rounded-t-md max-h-[200px] overflow-clip drop-shadow-sm'>
                                             <Image className='w-full' src={`${post.image_link}`} alt={`${post.title}`} width={350} height={350} />
                                         </div>

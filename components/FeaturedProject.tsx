@@ -18,7 +18,7 @@ export default function FeaturedProject() {
                     projects.map(project => {
                         return (
                             <Link key={project._id} href={`/projects/${project._raw.flattenedPath}`} className="lg:basis-[32%]">
-                                <div className="rounded-md border-[1px] border-gray-500 p-4 group hover:scale-105 transition-all hover:drop-shadow-md bg-white dark:bg-slate-950">
+                                <div className="rounded-md border-[1px] border-gray-500 p-4 group transition-all hover:drop-shadow-md bg-white dark:bg-slate-950">
                                     <h1 className="font-bold text-xl">
                                         {project.title}
                                     </h1>
