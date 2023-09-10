@@ -10,7 +10,7 @@ export default function Hero() {
                     <h1 className="lg:text-4xl text-2xl">
                         Hello!
                     </h1>
-                    <img src="https://flagpedia.net/data/flags/w580/id.webp" className="w-10" alt="independet day" />
+                    {/* <img src="https://flagpedia.net/data/flags/w580/id.webp" className="w-10" alt="independet day" /> */}
                 </div>
                 <h1 className="lg:text-5xl text-[30px] ">
                     You can call me <span className="text-transparent text-gradient-primary">Fkry</span>
