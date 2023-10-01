@@ -28,14 +28,14 @@ export default function Projects() {
                             projects.map(project => {
                                 return (
                                     <Link key={project._id} href={`/projects/${project._raw.flattenedPath}`} className="lg:basis-[32%]">
-                                        <div className="rounded-md border-[1px] border-gray-500 p-4 group transition-all hover:drop-shadow-md bg-white dark:bg-slate-950">
+                                        <div className="rounded-md border-[1px] border-gray-500 p-4 group transition-all hover:shadow-md bg-white dark:bg-slate-950">
                                             <h1 className="font-bold text-xl">
                                                 {project.title}
                                             </h1>
                                             <p className="text-xs line-clamp-2 mt-3 dark:text-gray-300 text-slate-600">
                                                 {project.description}
                                             </p>
-                                            <div className='mt-3 rounded-md max-h-[200px] overflow-clip drop-shadow-sm'>
+                                            <div className='mt-3 rounded-md max-h-[200px] overflow-clip shadow-sm'>
                                                 <Image width={350} height={350} className='w-full' src={`${project.image_link}`} alt='Thumbnail' />
                                             </div>
                                             <div className='mt-3 text-sm dark:text-gray-300 text-slate-600 font-semibold flex'>

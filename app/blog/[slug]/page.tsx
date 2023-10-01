@@ -28,7 +28,7 @@ export default function Projects({ params }: { params: { slug: string } }) {
             <div className="dark:text-white transition-all">
                 <Navbar />
                 <div className="lg:w-[70%] w-[90%] mx-auto mt-[30px]">
-                    <div className="w-full max-h-[420px] overflow-clip rounded-md drop-shadow">
+                    <div className="w-full max-h-[420px] overflow-clip rounded-md shadow">
                         <Image width={1000} height={1000} src={`${post.image_link}`} alt="Thumbnail" className="w-full" />
                     </div>
                     <h1 className="mt-5 lg:text-4xl text-2xl font-bold">
