@@ -1,0 +1,32 @@
+---
+title: AUTOMATIC STUDENT ATTENDANCE IN SIMARI
+category: project
+description: Scripts for automatic attendance student in Lambung Mangkurat University
+image_link: https://fkryakbar-counter.ninepmx.my.id/storage/NhV118jDu2bJobujBOWEbzxDZFx03yhXyMatvg1c.png
+date: 2023-09-30 21:00
+tech_stack: ["Laravel", "Tailwind"]
+demo_link: https://github.com/fkryakbar/presensi_automation_simari_ulm.git
+---
+
+# AUTOMATIC STUDENT ATTENDANCE IN SIMARI (INTEGRATED ACADEMIC INFORMATION SYSTEM OF LAMBUNG MANGKURAT UNIVERSITY)
+
+This script is used to enable students to perform automatic attendance in Simari. The script works by periodically fetching or requesting data from the server every 5 minutes and checking for each course that has meetings to perform attendance requests.
+
+The code is divided into two parts. First, there is script.js, which is executed using Node.js. To run the script, you can execute the following command in the terminal, and the results will appear in log.txt:
+
+```
+node script.js
+```
+
+The above command will execute the script and provide the results that will be logged in log.txt.
+
+The second part is script.gs, which is executed using Google Script or Apps Script and does not require Node.js as a runtime. To run it, you can use Google Sheets, go to the Extensions menu, and select Apps Script. Paste the script there and set up a trigger to run it every 5 minutes.
+
+Please note that for the script to run smoothly, make sure to update the `appstarter_session` cookie value every week to ensure that the script has an up-to-date cookie.
+
+### Information required in the script includes:
+
+- Cookie Value from `appstarter_session`
+- Academic Year
+
+This data should be entered into the `initConfig` variable.
