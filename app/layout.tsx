@@ -1,4 +1,4 @@
-import ProgressProvider from '@/components/ProgressProvider'
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 export const metadata = {
   title: 'Fkryakbar',
@@ -14,7 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en" className='dark'>
       <body className="dark:bg-slate-950">
-        <ProgressProvider>{children}</ProgressProvider>
+        {children}
+        <Analytics />
       </body>
     </html>
   )
