@@ -94,14 +94,14 @@ export default function Navbar() {
                     </div>
                 </nav>
             </div>
-            <div className="border-[1px] border-green-400 border-opacity-30 p-3 rounded-lg mb-5 lg:w-[70%] w-[90%] mx-auto">
+            {/* <div className="border-[1px] border-green-400 border-opacity-30 p-3 rounded-lg mb-5 lg:w-[70%] w-[90%] mx-auto">
                 <div className="flex gap-3 items-center justify-center">
                     <p className="text-center font-bold text-lg">
                         Free Palestine
                     </p>
                     <img src="https://flagpedia.net/data/flags/w580/ps.webp" className="w-10" alt="independet day" />
                 </div>
-            </div>
+            </div> */}
         </>
 
     )
