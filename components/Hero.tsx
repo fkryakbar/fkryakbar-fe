@@ -13,11 +13,11 @@ export default function Hero() {
                     {/* <img src="https://flagpedia.net/data/flags/w580/id.webp" className="w-10" alt="independet day" /> */}
                 </div>
                 <h1 className="lg:text-5xl text-[30px] ">
-                    You can call me <span className="text-transparent text-gradient-primary">Fkry</span>
+                    You can call me <span className="text-transparent text-gradient-primary">Arhan</span>
                 </h1>
             </div>
             <div className="mt-3 lg:w-[65%] w-[100%] lg:text-xl text-sm">
-                I&apos;am a mathematics student who enjoys learning new things, especially in the field of web development.
+                I&apos;am a web developer who enjoys learning new things, especially in the field of web development.
             </div>
             <div className="flex lg:gap-8 gap-5 lg:text-base text-sm font-semibold mt-6">
                 <div className="relative group">
