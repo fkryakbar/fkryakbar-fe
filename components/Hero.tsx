@@ -35,7 +35,7 @@ export default function Hero() {
                     </button>
                 </Link>
             </div>
-            <div className="mt-6">
+            {/* <div className="mt-6">
                 <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
                     <Link href={'https://www.instagram.com/fkryakbar/'} className="flex items-center gap-2  font-semibold text-sm">
                         <svg
@@ -64,7 +64,7 @@ export default function Hero() {
                         fkryakbar
                     </Link>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
