@@ -13,7 +13,7 @@ export default function Hero() {
                     {/* <img src="https://flagpedia.net/data/flags/w580/id.webp" className="w-10" alt="independet day" /> */}
                 </div>
                 <h1 className="lg:text-5xl text-[30px] ">
-                    You can call me <span className="text-transparent text-gradient-primary">Arhan</span>
+                    You can call me <span className="text-transparent text-gradient-primary">Fkry</span>
                 </h1>
             </div>
             <div className="mt-3 lg:w-[65%] w-[100%] lg:text-xl text-sm">
@@ -35,7 +35,7 @@ export default function Hero() {
                     </button>
                 </Link>
             </div>
-            {/* <div className="mt-6">
+            <div className="mt-6">
                 <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
                     <Link href={'https://www.instagram.com/fkryakbar/'} className="flex items-center gap-2  font-semibold text-sm">
                         <svg
@@ -64,7 +64,7 @@ export default function Hero() {
                         fkryakbar
                     </Link>
                 </div>
-            </div> */}
+            </div>
         </div>
     )
 }
