@@ -1,0 +1,54 @@
+---
+title: E-Arsip Pendidikan Matematika
+category: project
+description: Automated Document Archiving System with Google Drive Integration
+image_link: https://fkryakbar-counter.ninepmx.my.id/storage/HCaI9viaT9TwU79hqd44Wse4AckuJ9X5IDlRkCCs.jpg
+date: 2024-11-20 21:00
+tech_stack: ["Laravel", "Tailwind", "Docker", "InertiaJS", "ReactJS"]
+demo_link: https://arsip.fkipulm.id/
+---
+
+# Introduction
+
+In academic institutions, managing administrative documents like decrees (SK), letters, and reports often involves physical storage or fragmented digital systems, risking data loss and inefficiency. For the Mathematics Education Department at Universitas Lambung Mangkurat, I developed E-Arsip Pendidikan Matematika—a secure, cloud-integrated archiving system that automates document storage, organization, and sharing while ensuring data resilience through Google Drive synchronization.
+
+# Project Overview
+- Role: Solo Developer (Full-stack development, cloud integration, and deployment)
+- Technologies: Laravel, Inertia.js (React), MySQL, Google Drive API, Docker, Nginx Unit
+- Access: Restricted to program admins via Google Login (only authorized institutional emails).
+
+# The Problem & Purpose
+The department previously relied on local servers and manual file organization, which posed risks like:
+- Data loss if servers failed.
+- Time-consuming searches for specific documents.
+- No centralized access control for sensitive files.
+E-Arsip was designed to:
+- Automatically back up files to Google Drive for disaster recovery.
+- Simplify document retrieval with advanced search and tagging.
+- Enable secure sharing with customizable access permissions.
+
+# Key Features Developed
+### Google Drive Auto-Sync
+- Files uploaded to E-Arsip are instantly mirrored to a dedicated Google Drive folder.
+- Ensures data safety even if the primary server goes offline.
+### One-Click Sharing
+- Admins can generate shareable Google Drive links directly from the system.
+- Control file visibility: Set documents as public (anyone with the link) or private (restricted to institutional users).
+### Advanced Document Management
+- Categorize files by type (e.g., SK, letters, reports) and add searchable metadata.
+- React-based interface (via Inertia.js) allows fast filtering and previews for PDFs/images.
+### Secure Institutional Access
+- Google OAuth restricts login to authorized university emails.
+- Role-based access ensures only program admins manage sensitive files.
+
+# Technical Implementation
+- Backend: Laravel handles file uploads, Google Drive API integration, and user authentication.
+- Frontend: Inertia.js with React delivers a single-page app (SPA) experience for seamless navigation.
+- Database: MySQL stores document metadata and user permissions.
+- Deployment: Dockerized with Nginx Unit for scalable, high-performance hosting.
+
+# Google Drive Integration Workflow:
+- Users upload files via E-Arsip's interface.
+- Laravel's Google Drive package syncs files to the cloud.
+- File metadata (title, category, uploader) is saved in MySQL.
+- Users retrieve files via search or browse categories, with options to copy/share Drive links.

@@ -22,13 +22,16 @@ export default function About() {
                         </div>
                         <article className="lg:text-lg text-xs dark:text-gray-300 text-gray-600 lg:text-justify">
                             <p>
-                                Hi! My name is Ahmad Fikri Akbar and Currently, I am a student pursuing a degree in Mathematics Education at Lambung Mangkurat University. Alongside my studies, I have been working on developing my skills in programming. I am an avid self-learner, relying on online resources, particularly YouTube, to enhance my programming abilities.
+                                Hi! My name is Ahmad Fikri Akbar. I hold a degree in Mathematics Education from Lambung Mangkurat University. Currently, I work as a civil servant (ASN) at the Ministry of Religious Affairs of the Republic of Indonesia, specifically in the Directorate of Islamic Education.
                             </p>
                             <p className="mt-2">
-                                I am a passionate individual who started learning programming in 2021. I have a particular interest in web development and thoroughly enjoy exploring this field. I am always eager to learn new things and expand my knowledge. On this website, I plan to write blog posts and showcase various projects that I have worked on. Throughout my learning journey, I have successfully completed several real projects. These projects have allowed me to apply my knowledge and showcase my capabilities. I am excited to share these projects and other valuable insights through my blog on this website.
+                                Alongside my role as a government employee, I am also actively involved in web development. My journey into programming began in 2021, and since then, I have been continuously honing my skills through self-learning, utilizing various online resources. I have a deep passion for web development and enjoy exploring new technologies in this field.
                             </p>
                             <p className="mt-2">
-                                If you have any questions or would like to engage in a discussion, please feel free to reach me out. I would be delighted to assist you in any way I can.
+                                On this website, I plan to share my projects, insights, and blog posts related to programming and web development. Through my learning journey, I have successfully completed several real-world projects that demonstrate my skills and expertise.
+                            </p>
+                            <p className="mt-2">
+                                If you have any questions or would like to discuss anything, feel free to reach out. I&apos;d be happy to connect and collaborate!
                             </p>
                         </article>
                     </div>

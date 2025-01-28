@@ -1,0 +1,66 @@
+---
+title: Sistem Informasi Akademik Pendidikan Matematika (SIAPEKA)
+category: project
+description: Digitizing Thesis Supervision & Academic Advising with Laravel, Livewire, and High-Performance Deployment
+image_link: https://fkryakbar-counter.ninepmx.my.id/storage/a1hSbnJyXcK8DGFsa2fnfAaZU3BPdECNKE0YaNOB.jpg
+date: 2025-01-12 21:00
+tech_stack: ["Laravel", "Tailwind", "Docker", "FrankenPHP", "Livewire"]
+demo_link: https://siapeka.fkipulm.id/
+---
+
+# Introduction
+
+Managing thesis supervision and academic advising in universities often involves fragmented communication, paper-based logs, and delayed feedback loops. For the Mathematics Education Department at Universitas Lambung Mangkurat, I developed SIAPEKA—a unified academic information system that digitizes thesis consultations, academic advising, and final project administration. By centralizing these processes, SIAPEKA empowers students, lecturers, and administrators to collaborate seamlessly while eliminating manual workflows.
+
+# Project Overview
+- Role: Solo Developer (Full-stack development, deployment, and optimization)
+- Technologies: Laravel, Livewire, Tailwind CSS, FrankenPHP (Laravel Octane), Docker
+- Access: Integrated with the university's central authentication system (no separate accounts required).
+
+# The Problem & Purpose
+Before SIAPEKA:
+- Students tracked thesis progress via physical logbooks, risking loss or inconsistency.
+- Lecturers struggled to monitor multiple advisee's timelines.
+- Administrative tasks like thesis registration and final defense scheduling were paper-heavy.
+SIAPEKA addresses these by:
+- Digitizing thesis supervision and academic advising logs.
+- Automating administrative workflows (thesis registration, defense scheduling).
+- Providing real-time access to progress reports for students, lecturers, and admins.
+
+# Key Features Developed
+### Multi-Role Platform
+- Students: Log thesis/academic consultations, submit documents, and register for defenses.
+- Lecturers: Monitor advisee progress, approve milestones, and provide feedback.
+- Admins: Manage schedules, generate institutional reports, and oversee system settings.
+### Unified Authentication
+- Users log in with existing university credentials (no new accounts required).
+- Role permissions are auto-assigned based on institutional data.
+### Digital Consultation Logs
+- Students record thesis or academic meetings with timestamps and notes.
+- Lecturers validate entries and attach feedback.
+- All logs are exportable as PDF for accreditation or review.
+### Automated Thesis Defense Workflow
+- Students apply for defense exams online.
+- Admins assign panels, schedule sessions, and notify participants via the platform.
+
+# Livewire-Powered Real-Time Updates
+- Lecturers see student progress updates instantly (e.g., new consultation logs).
+- Students receive notifications when supervisors approve milestones.
+
+# Technical Implementation
+### Backend: Laravel handles business logic, user roles, and PDF generation.
+### Frontend: Livewire enables dynamic interfaces (e.g., real-time notifications, form submissions).
+### Styling: Tailwind CSS ensures a clean, mobile-responsive design.
+### Deployment:
+- Challenge: FrankenPHP's requirement for port 80 conflicted with existing services.
+- Solution: Leveraged Laravel Octane with FrankenPHP in Docker to optimize performance while isolating the environment.
+- Outcome: Achieved high-speed request handling for concurrent users (ideal for peak academic periods).
+
+# Why FrankenPHP & Laravel Octane?
+- Performance: FrankenPHP's compiled runtime and Octane's persistent application state reduce latency during high traffic.
+- Scalability: Dockerized deployment allows easy scaling as user numbers grow.
+
+# Outcome 
+- Efficiency: Thesis registration time reduced by 75%, and advisors review progress 50% faster.
+- Transparency: Students and lecturers access real-time logs, minimizing disputes over consultation records.
+- Sustainability: Paperless workflows have cut departmental printing costs by 90%.

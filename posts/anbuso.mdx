@@ -1,0 +1,50 @@
+---
+title: Analisis Butir Soal Berbasis Web (ANBUSO)
+category: project
+description: Automated Test Item Analysis & Real-Time CBT Platform for Mathematics Educators
+image_link: https://fkryakbar-counter.ninepmx.my.id/storage/IFxInEQHUnlNP83dEnKW766j5yLL6plzLX8VHsM4.jpg
+date: 2024-12-28 21:00
+tech_stack: ["Laravel", "Tailwind", "Docker", "Inertia", "ReactJS"]
+demo_link: https://anbusopmtk.fkipulm.id/
+---
+
+# Introduction
+
+Manual test item analysis and paper-based exams are time-intensive processes for educators, often delaying feedback and hindering data-driven improvements. To empower teachers at the Mathematics Education Department of Universitas Lambung Mangkurat, I developed Anbuso—a web-based platform that automates test item analytics and doubles as a real-time Computer-Based Testing (CBT) system. This dual-purpose tool streamlines exam creation, administration, and analysis, all within a single interface.
+
+# Project Overview
+- Role: Solo Developer (Full design, development, and deployment)
+- Technologies: Laravel, Inertia.js (React), Tailwind CSS, MySQL, Docker (Nginx + PHP-FPM)
+
+# The Problem & Purpose
+Mathematics teachers faced two key challenges:
+- Manual Item Analysis: Calculating metrics like validity and difficulty manually for hundreds of test items consumed hours of work.
+- Disconnected CBT Tools: Existing CBT platforms lacked integrated analytics, forcing teachers to juggle multiple systems.
+Anbuso solves these by:
+- Automating statistical analysis for both multiple-choice and essay questions.
+- Serving as a unified platform for creating exams, administering CBT sessions, and generating real-time insights.
+
+# Key Features Developed
+### Automated Test Item Analytics
+- Multiple-Choice Analysis: Calculates difficulty index, discrimination power, distractor efficiency, and reliability.
+- Essay Evaluation: Provides validity scoring based on rubric alignment.
+- Instant Reports: Teachers export analysis results as Excel for accreditation or review.
+### Real-Time Computer-Based Testing (CBT)
+- Students take exams online with time limits and auto-submission.
+- Live Progress Dashboard: Teachers monitor participation and scores in real time.
+### User-Friendly Interface
+- React-powered UI (via Inertia.js) allows seamless navigation between exam creation, analytics, and student monitoring.
+- Tailwind CSS ensures responsive design across devices.
+### Role-Based Access
+- Teachers create exams and view analytics; students access only assigned tests.
+
+# Technical Implementation
+- Backend: Laravel manages exam logic, analytics calculations, and user roles.
+- Frontend: Inertia.js bridges Laravel with React, enabling dynamic UIs without full-page reloads (e.g., live score updates).
+- Database: MySQL stores exam questions, student responses, and analysis results.
+- Deployment: Dockerized with Nginx and PHP-FPM for optimized performance and scalability.
+
+# Outcome 
+- Teachers now complete item analysis in minutes instead of days.
+- Over 200+ users or teacher have been registered via Anbuso.
+- The system has reduced post-exam feedback delays by 90%, enabling faster curriculum improvements.

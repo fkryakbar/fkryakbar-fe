@@ -1,0 +1,44 @@
+---
+title: Campus Inventory Management System (SIPAMAN)
+category: project
+description: Building a Secure Campus Inventory Management System with Laravel & Livewire
+image_link: https://fkryakbar-counter.ninepmx.my.id/storage/30uLaE4aQnjtIJDCcNGC85OrmZ75QpoAp66kgJIR.jpg
+date: 2024-11-14 21:00
+tech_stack: ["Laravel", "Tailwind", "Docker", "Livewire"]
+---
+
+# Introduction
+
+Managing inventory and loan processes in an academic environment can be time-consuming and error-prone. At the Mathematics Education Department of Universitas Lambung Mangkurat, students and staff frequently borrow equipment for academic activities, but manual record-keeping often led to inefficiencies. To solve this, I developed SIPAMAN (Sistem Informasi Penyimpanan), a secure web-based inventory system tailored to streamline item tracking and loan management within the faculty's network.
+
+# Project Overview
+- Role: Solo Developer (Full-stack development, deployment, and maintenance)
+- Technologies: Laravel, Livewire, Tailwind CSS, SQLite, Docker
+- Access Restriction: Limited to faculty Wi-Fi to ensure security and campus-only usage.
+
+# The Problem & Purpose
+Before SIPAMAN, loan processes relied on manual logs, causing delays, misplaced items, and difficulty tracking availability. The system needed to:
+- Automate loan records for students and staff.
+- Restrict access to on-campus users via faculty Wi-Fi.
+- Integrate with existing student data from the department's educational information system.
+
+# Key Features Developed
+### Automated Student Data Sync
+- Students enter their username, and SIPAMAN instantly pulls their details (name, ID, program) from the Mathematics Education Department's API (an existing system I also developed).
+- Eliminates manual data entry and reduces errors.
+### Real-Time Item Availability
+- Users can check item availability (e.g., calculators, lab tools) in real time before submitting a loan request.
+- Admin dashboard updates inventory status automatically after each transaction.
+### Secure Campus-Only Access
+- The app is only accessible via the faculty's Wi-Fi network, ensuring that loans are managed physically within the campus.
+### User-Friendly Interface
+- Built with Tailwind CSS for a clean, responsive design.
+- Livewire components enable dynamic interactions without page reloads (e.g., searching items, submitting forms).
+
+# Technical Implementation
+- Backend: Laravel's MVC architecture streamlined API integration and business logic. Eloquent ORM simplified SQLite database operations.
+- Frontend: Livewire enabled reactive UIs for seamless form handling and real-time updates.
+- Deployment: Dockerized for easy setup and scalability. SQLite was chosen for its lightweight performance in a small-scale environment.
+
+# Outcome 
+SIPAMAN has improved loan tracking efficiency by 50% at the Mathematics Education Department. Students now borrow items in under 2 minutes, and administrators manage inventory with minimal effort. The system's success has sparked interest in expanding it to other departments.
